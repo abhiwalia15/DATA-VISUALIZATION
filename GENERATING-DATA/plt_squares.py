@@ -3,11 +3,13 @@
 import matplotlib.pyplot as plt
 #pyplot contains a number of functions that help generate charts and plots.
 
+#input the x axis values correctly
+input_values = [1,2,3,4,5]
 #store the numbers in a list.
 squares = [1,4,9,16,25]
 
 #linewidth parameter controls the thickness fo the line
-plt.plot(squares,linewidth=5)
+plt.plot(input_values, squares, linewidth=5)
 
 #set chart labels and labels axes
 plt.title("SQUARE NUMBERS",fontsize=24)
