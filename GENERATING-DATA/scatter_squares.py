@@ -4,7 +4,8 @@ import matplotlib.pyplot as plt
 #s parameter is used to set the size of the dots.
 x_values = list(range(1,1001))
 y_values = [x**2 for x in x_values]
-plt.scatter(x_values, y_values, edgecolor='none', s=10)
+#c parameter gives the color.RGB values from 0 to 1,Colors closer to 0 produce dark color and close to 1 produce light color.
+plt.scatter(x_values, y_values, c=y_values, cmap=plt.cm.Reds, edgecolor='none', s=10)
 
 #set the chart title and labels axes.
 plt.title("SQUARE NUMBERS",fontsize=24)
