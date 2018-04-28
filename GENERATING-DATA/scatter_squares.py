@@ -18,4 +18,5 @@ plt.axis([0,1100,0,1100000])
 #set size of tick labels.
 plt.tick_params(axis='both',which='major',labelsize=14)
 
+#savefig()function will directly save the image .first parameter is the name of the file and second parameter trims the extra whitespace from the plot.
 plt.savefig('figure_10.png',bbox_inches='tight')

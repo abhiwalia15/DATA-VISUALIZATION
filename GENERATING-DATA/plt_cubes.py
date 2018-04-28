@@ -9,5 +9,5 @@ plt.title("CUBES OF NUMBERS",fontsize=24)
 plt.xlabel("VALUES",fontsize=14)
 plt.ylabel("CUBES OF VALUES",fontsize=14)
 
-plt.savefig('figure_11.png')
+plt.show('figure_11.png')
 
