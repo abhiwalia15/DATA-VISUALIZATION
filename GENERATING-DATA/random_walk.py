@@ -16,11 +16,11 @@ class RandomWalk():
 		
 		while len(self.x_values) < self.num_points:
 			#decide which direction to go and how far to go in that direction.
-			x_direction = choice([-1,1])
+			x_direction = choice([1,-1])
 			x_distance = choice([0,1,2,3,4])
 			x_step = x_distance*x_direction
 			
-			y_direction = choice([-1,1])
+			y_direction = choice([1,-1])
 			y_distance = choice([0,1,2,3,4])
 			y_step = y_distance*y_direction
 			
@@ -31,7 +31,7 @@ class RandomWalk():
 			#calculate the next x and y values
 			next_x = self.x_values[-1]+x_step
 			next_y = self.y_values[-1]+y_step
-			self.x_values = self.x_values.append(next_x)
-			self.y_values = self.y_values.append(next_y)
+			self.x_values.append(next_x)
+			self.y_values.append(next_y)
 			
 			
