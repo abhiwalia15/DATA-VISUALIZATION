@@ -30,5 +30,8 @@ hist.title = "Results of rolling a D6 1000 times"
 hist.x_labels = ['1','2','3','4','5','6']
 hist.x_title = "Results"
 hist.y_title = "Frequeny of results"
+
+'''We use add() to add a series of values to the chart(passing it a label for 
+the set of values to be added and a list of the values to appear on the chart)'''
 hist.add('D6',frequencies)
 hist.render_to_file('die_visuals.svg')
