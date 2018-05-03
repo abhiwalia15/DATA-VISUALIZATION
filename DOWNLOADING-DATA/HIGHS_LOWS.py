@@ -9,10 +9,14 @@ with open(filename) as f:
 	reader = csv.reader(f)
 	#next() function returns the next line in the file
 	header_row = next(reader)
-
+	
+	#read the row one temperatures data.
 	highs = []
 	for row in reader:
-		highs.append(row[1])
+		#convert the extraceted data into int form from the string format by using int() function.
+		#we are converting it into int() to read the data for visualization of matplotlib.
+		high = int(row[1])
+		highs.append(high)
 	print(highs)	
 
 	#we use enumerate() function to read the index as well as values in the list.
