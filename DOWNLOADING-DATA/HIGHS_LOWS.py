@@ -1,4 +1,5 @@
 import csv
+from matplotlib import pyplot as plt
 
 #get high temperatures from the file
 #open the file as file object
@@ -23,3 +24,14 @@ with open(filename) as f:
 	for index, column_header in enumerate(header_row):
 		print(index, column_header)
 		
+#plot data
+'''set pixels using dpi'''
+fig = plt.figure(dpi=128, figsize=(10,6))
+plt.plot(highs, c='red')
+
+#format plot
+plt.title("DAILY HIGH TEMPERATURES, JULY 2014",fontsize=24)
+plt.xlabel('', fontsize=16)
+plt.ylabel("TEMPERATURE(F)",fontsize=16)
+plt.tick_params(axis='both', which='major', labelsize=16)
+plt.show()
