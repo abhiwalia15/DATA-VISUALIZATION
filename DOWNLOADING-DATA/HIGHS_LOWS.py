@@ -8,5 +8,6 @@ with open(filename) as f:
 	reader = csv.reader(f)
 	#next() function returns the next line in the file
 	header_row = next(reader)
-	print(header_row)
-	
+
+	for index, column_header in enumerate(header_row):
+		print(index, column_header)
