@@ -12,7 +12,7 @@ for roll_num in range(1000):
 	results.append(result)
 	
 #analyze the result.
-#create an empt list to store the values.
+#create an empty list to store the values.
 frequencies=[]
 
 for value in range(1,die.num_sides+1):
