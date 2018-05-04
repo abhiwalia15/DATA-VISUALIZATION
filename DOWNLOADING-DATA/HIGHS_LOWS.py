@@ -4,7 +4,7 @@ from matplotlib import pyplot as plt
 
 #get dates & high temperatures from the file
 #open the file as file object
-filename = "sitka_weather_07-2014.csv"
+filename = "sitka_weather_2014.csv"
 
 with open(filename) as f:
 	#reader processes the first line of comma-separated values in the file and stores each as an item in a list
@@ -34,7 +34,7 @@ fig = plt.figure(dpi=128, figsize=(10,6))
 plt.plot(dates, highs, c='red')
 
 #format plot
-plt.title("DAILY HIGH TEMPERATURES, JULY 2014",fontsize=24)
+plt.title("DAILY HIGH TEMPERATURES, 2014",fontsize=24)
 plt.xlabel('', fontsize=16)
 #this draws the date labels diagonally so that they dont overlap
 fig.autofmt_xdate()
