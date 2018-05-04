@@ -2,7 +2,7 @@ import csv
 from datetime import datetime
 from matplotlib import pyplot as plt
 
-#get dates & high temperatures from the file
+#get dates, high and low temperatures from the file
 #open the file as file object
 filename = "sitka_weather_2014.csv"
 
@@ -13,7 +13,7 @@ with open(filename) as f:
 	header_row = next(reader)
 	
 	#read the row one temperatures data.
-	dates, highs = [], []
+	dates, highs, lows = [], [], []
 	for row in reader:
 		current_date = datetime.strptime(row[0], "%Y-%m-%d")
 		dates.append(current_date)
@@ -22,7 +22,9 @@ with open(filename) as f:
 		#we are converting it into int() to read the data for visualization of matplotlib.
 		high = int(row[1])
 		highs.append(high)
-	print(highs)	
+		
+		low=int(row[3])
+		lows.append(low)
 
 	#we use enumerate() function to read the index as well as values in the list.
 	for index, column_header in enumerate(header_row):
@@ -32,9 +34,10 @@ with open(filename) as f:
 '''set pixels using dpi'''
 fig = plt.figure(dpi=128, figsize=(10,6))
 plt.plot(dates, highs, c='red')
+plt.plot(dates, lows, c='blue')
 
 #format plot
-plt.title("DAILY HIGH TEMPERATURES, 2014",fontsize=24)
+plt.title("DAILY HIGH AND LOW TEMPERATURES, 2014",fontsize=24)
 plt.xlabel('', fontsize=16)
 #this draws the date labels diagonally so that they dont overlap
 fig.autofmt_xdate()
