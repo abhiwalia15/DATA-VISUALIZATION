@@ -33,8 +33,11 @@ with open(filename) as f:
 #plot data
 '''set pixels using dpi'''
 fig = plt.figure(dpi=128, figsize=(10,6))
-plt.plot(dates, highs, c='red')
-plt.plot(dates, lows, c='blue')
+plt.plot(dates, highs, c='red', alpha=0.5)
+plt.plot(dates, lows, c='blue', alpha=0.5)
+#fill_between() function is used to fill the space between.it takes a series  of x-values and 2 y-values to fill them
+#aplha controls the transparecy of the colors(alpha=0 is transparent and aplha=1 is completly opaque)
+plt.fill_between(dates, highs, lows, facecolor='blue', alpha=0.2)
 
 #format plot
 plt.title("DAILY HIGH AND LOW TEMPERATURES, 2014",fontsize=24)
