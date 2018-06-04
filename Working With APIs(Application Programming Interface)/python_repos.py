@@ -1,14 +1,22 @@
 import requests
 
-#make an API call and store the response.
-url = 'https://api.github.com/Search/repositories?'
-'q=language:python&sort=stars'
-
+# Make an API call, and store the response.
+url = 'https://api.github.com/search/repositories?q=language:python&sort=stars'
 r = requests.get(url)
-print('status code:', r.status_code)
+print("Status code:", r.status_code)
 
-#store API response in a varaiable
+# Store API response in a variable.
 response_dict = r.json()
+print("Total repositories:", response_dict['total_count'])
 
-#process results
-print(response_dict.keys())
+# Explore information about the repositories.
+repo_dicts = response_dict['items']
+
+print("repositories returned: ",len(repo_dicts))
+
+#examine the first repository.
+repo_dict = repo_dicts[0]
+print("\nkeys :", len(repo_dict))
+
+for key in sorted(repo_dict.keys()):
+	print(key)
