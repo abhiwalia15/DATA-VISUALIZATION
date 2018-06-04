@@ -1,6 +1,7 @@
 import json
-import pygal
+from pygal.maps.world import World
 from countries_code import get_country_code
+from pygal.style import LightColorizedStyle as LCS, RotateStyle as RS
 
 #import the data into a list
 filename = 'population_data.json'
@@ -34,9 +35,12 @@ for cc, pop in cc_populations.items():
 #see how many countries are in each level
 print(len(cc_pops_1), len(cc_pops_2), len(cc_pops_3))
 	
-wm=pygal.maps.world.World()
 
-wm.title='WORLD POPULATION IN 2010, BY COUNTRY'
+#  The color used here (#336699) mixes a bit of red (33), a little more green (66),
+#           and even more blue (99)
+wm_style = RS('#336699', base_style=LCS)
+wm = World(style=wm_style)
+wm.title = "World Population in 2010, by Country"
 wm.add('0-10m', cc_pops_1)		
 wm.add('10m-1bn', cc_pops_2)
 wm.add('>1bn', cc_pops_3)

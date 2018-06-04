@@ -5,6 +5,8 @@ def get_country_code(country_name):
 	for code, name in COUNTRIES.items():
 		if name==country_name:
 			return code
+
+    # if the country wasnt found, retun None.
+	return None
 			
-		#if country name wasn't found, return none.
-		return None
+		
