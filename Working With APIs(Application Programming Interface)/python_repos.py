@@ -14,6 +14,15 @@ repo_dicts = response_dict['items']
 
 print("repositories returned: ",len(repo_dicts))
 
+print("SELECTED INFORMATION ABOUT EACH REPOSITORY:")
+#loop through each of repository.
+for repo_dict in repo_dicts:
+	print("\nNAME:", repo_dict['name'])
+	print("OWNER:", repo_dict['owner']['login'])
+	print("STARS:", repo_dict['stargazers_count'])
+	print("REPOSITORY:", repo_dict['html_url'])
+	print("DESCRIPTION:", repo_dict['description'])
+
 #examine the first repository.
 repo_dict = repo_dicts[0]
 
@@ -28,7 +37,5 @@ print("UPDATED:", repo_dict['updated_at'])
 print("DESCRIPTION:", repo_dict['description'])
 print("\nkeys :", len(repo_dict))
 
-for key in sorted(repo_dict.keys()):
-	print(key)
 
 
