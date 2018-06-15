@@ -16,7 +16,19 @@ print("repositories returned: ",len(repo_dicts))
 
 #examine the first repository.
 repo_dict = repo_dicts[0]
+
+#print all the inforamtion about the first repository in github
+print('\nSelected information about first repository:')
+print("NAME:", repo_dict['name'])
+print("OWNER:", repo_dict['owner']['login'])
+print("STAR:", repo_dict['stargazers_count'])
+print("REPOSITORY:", repo_dict['html_url'])
+print("CREATED:", repo_dict['created_at'])
+print("UPDATED:", repo_dict['updated_at'])
+print("DESCRIPTION:", repo_dict['description'])
 print("\nkeys :", len(repo_dict))
 
 for key in sorted(repo_dict.keys()):
 	print(key)
+
+
