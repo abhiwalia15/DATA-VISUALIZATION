@@ -1,8 +1,8 @@
 import pygal
 from pygal.style import LightColorizedStyle as LCS, LightenStyle as LS
 
-my_style = LS('#333366', base_style = LCS)
-chart = pygal.Bar(style = my_style, x_label_rotation = 45, show_legend = False)
+my_style = LS('#341256', base_style = LCS)
+chart = pygal.Bar(style = my_style, x_label_rotation = 0, show_legend = False)
 
 chart.title = 'PYTHON-PROJECTS'
 chart.x_labels = ['awesome-python', 'public-apis', 'youtube-dl']
