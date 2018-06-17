@@ -43,7 +43,7 @@ chart.x_label = names
 chart.add(' ', stars)
 chart.render_to_file('python_repos.svg')
  
-'''
+
 print("repositories returned: ",len(repo_dicts))
 print("SELECTED INFORMATION ABOUT EACH REPOSITORY:")
 #loop through each of repository.
@@ -55,7 +55,7 @@ for repo_dict in repo_dicts:
 	print("CREATED:", repo_dict['created_at'])
 	print("UPDATED:", repo_dict['updated_at'])
 	print("DESCRIPTION:", repo_dict['description'])
-'''
+
 
 
 
